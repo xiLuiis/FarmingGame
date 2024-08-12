@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://d10av4y8xvuqe"]
+[gd_scene load_steps=6 format=3 uid="uid://mncknb2jpvcq"]
 
 [ext_resource type="Script" path="res://carrot_seedpack.gd" id="1_4bx34"]
 [ext_resource type="Texture2D" uid="uid://csw3snw6lj28u" path="res://images/farmingTilesheetComplete.png" id="2_pwjhs"]
