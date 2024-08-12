@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Farm_Game"
-run/main_scene="res://player.tscn"
+run/main_scene="res://world.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://global.gd"
 
 [display]
 
