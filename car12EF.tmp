@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-[gd_scene load_steps=6 format=3 uid="uid://mncknb2jpvcq"]
-=======
 [gd_scene load_steps=6 format=3 uid="uid://dhaq80wpvoro5"]
->>>>>>> 37bd12788d8a70e897389ef75ba59d493d23f902
 
 [ext_resource type="Script" path="res://carrot_seedpack.gd" id="1_4bx34"]
 [ext_resource type="Texture2D" uid="uid://csw3snw6lj28u" path="res://images/farmingTilesheetComplete.png" id="2_pwjhs"]
@@ -26,7 +22,6 @@ animations = [{
 radius = 5.96199
 
 [node name="carrot_seedpack" type="StaticBody2D"]
-position = Vector2(28, 16)
 script = ExtResource("1_4bx34")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
