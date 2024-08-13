@@ -16,7 +16,7 @@ func _physics_process(delta):
 		motion.y = speed
 
 	if motion != Vector2.ZERO:
-		if motion.y < 0:
+		if motion.y < 0:	
 			$AnimatedSprite2D.play("walking_up")
 		elif motion.y > 0:
 			$AnimatedSprite2D.play("walking_down")
