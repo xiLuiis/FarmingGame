@@ -1,7 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://crry12td0rd7h"]
+[gd_scene load_steps=15 format=3 uid="uid://crry12td0rd7h"]
 
 [ext_resource type="Texture2D" uid="uid://csw3snw6lj28u" path="res://images/farmingTilesheetComplete.png" id="1_6hcja"]
+[ext_resource type="Script" path="res://world.gd" id="1_aasvw"]
 [ext_resource type="PackedScene" uid="uid://dlhufk0w7lf36" path="res://player.tscn" id="2_6fvv0"]
+[ext_resource type="PackedScene" uid="uid://dhaq80wpvoro5" path="res://carrot_seedpack.tscn" id="3_p0qht"]
+[ext_resource type="PackedScene" uid="uid://ce117btd3uir5" path="res://growingzone.tscn" id="4_svchi"]
+[ext_resource type="PackedScene" uid="uid://43xj4m6whi4o" path="res://onion_seedpack.tscn" id="5_g1qw4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tcsre"]
 resource_name = "Floor"
@@ -355,7 +359,39 @@ texture = ExtResource("1_6hcja")
 [sub_resource type="TileSet" id="TileSet_a2p8t"]
 sources/0 = SubResource("TileSetAtlasSource_logeq")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_gf1ww"]
+atlas = ExtResource("1_6hcja")
+region = Rect2(128, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pb084"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gf1ww")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aa6x8"]
+atlas = ExtResource("1_6hcja")
+region = Rect2(80, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ctjuv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aa6x8")
+}],
+"loop": true,
+"name": &"carrot",
+"speed": 5.0
+}]
+
 [node name="World" type="Node2D"]
+position = Vector2(29, 30)
+script = ExtResource("1_aasvw")
 
 [node name="Background" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_1prja")
@@ -367,4 +403,54 @@ tile_set = SubResource("TileSet_a2p8t")
 format = 2
 layer_0/tile_data = PackedInt32Array(2, 589824, 7, 3, 786432, 7, 458764, 131072, 11, 524300, 131072, 12, 458765, 196608, 11, 524301, 196608, 12, 393219, 131072, 11, 458755, 131072, 12, 393220, 196608, 11, 458756, 196608, 12, 393224, 393216, 11, 458760, 393216, 12, 393225, 458752, 11, 458761, 458752, 12, 131072, 393216, 11, 196608, 393216, 12, 131073, 458752, 11, 196609, 458752, 12, 524294, 524288, 11, 589830, 524288, 12, 524295, 589824, 11, 589831, 589824, 12, 393217, 524288, 11, 458753, 524288, 12, 393218, 589824, 11, 458754, 589824, 12, 393226, 524288, 11, 458762, 524288, 12, 393227, 589824, 11, 458763, 589824, 12, 327679, 262144, 11, 393215, 262144, 12, 262144, 327680, 11, 327680, 327680, 12, 131075, 458752, 8, 131076, 524288, 8, 131077, 524288, 8, 131078, 524288, 8, 131079, 524288, 8, 131080, 524288, 8, 131081, 524288, 8, 131082, 524288, 8, 131083, 524288, 8, 131084, 524288, 8, 131074, 393216, 8, 11, 393216, 8, 65543, 65536, 12, -65532, 393216, 8, 327691, 393216, 8, 16, 393216, 8, 393231, 524288, 805306376, 131089, 393216, 8, 196621, 524288, 1342177288, 262157, 524288, 1342177288, 327693, 524288, 1342177288, 393230, 524288, 805306376, 393232, 524288, 805306376, 131085, 655360, 1342177288, 393229, 655360, 1610612744, 393233, 458752, 805306376, 393234, 393216, 8, 262159, 393216, 8, -196595, 393216, 8, 524304, 393216, 8, -65538, 524288, 6, -2, 458752, 7, -65537, 720896, 6, -131072, 589824, 6, -131071, 589824, 6, -131070, 720896, 6, -131069, 786432, 6, -65533, 458752, 7, 1, 589824, 7, 0, 589824, 7, 65535, 589824, 7, 65534, 524288, 7, 6, 0, 11, 65542, 0, 12, 7, 65536, 11)
 
-[node name="player" parent="Foreground" instance=ExtResource("2_6fvv0")]
+[node name="player" parent="." instance=ExtResource("2_6fvv0")]
+position = Vector2(320, 45)
+
+[node name="growingzone" parent="." instance=ExtResource("4_svchi")]
+position = Vector2(40, 72)
+
+[node name="growingzone2" parent="." instance=ExtResource("4_svchi")]
+position = Vector2(72, 72)
+
+[node name="growingzone3" parent="." instance=ExtResource("4_svchi")]
+position = Vector2(104, 72)
+
+[node name="growingzone4" parent="." instance=ExtResource("4_svchi")]
+position = Vector2(136, 72)
+
+[node name="carrot_seedpack" parent="." instance=ExtResource("3_p0qht")]
+position = Vector2(187, 55)
+
+[node name="onion_seedpack" parent="." instance=ExtResource("5_g1qw4")]
+position = Vector2(169, 55)
+
+[node name="carroticon" type="AnimatedSprite2D" parent="."]
+position = Vector2(288, -16)
+scale = Vector2(1.625, 1.625)
+sprite_frames = SubResource("SpriteFrames_pb084")
+
+[node name="carrottext" type="RichTextLabel" parent="."]
+offset_left = 301.0
+offset_top = -25.0
+offset_right = 341.0
+offset_bottom = 15.0
+text = "= 0"
+scroll_active = false
+tab_size = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="onionicon" type="AnimatedSprite2D" parent="."]
+position = Vector2(288, 12)
+scale = Vector2(1.625, 1.625)
+sprite_frames = SubResource("SpriteFrames_ctjuv")
+animation = &"carrot"
+
+[node name="oniontext" type="RichTextLabel" parent="."]
+offset_left = 301.0
+offset_top = 3.0
+offset_right = 341.0
+offset_bottom = 43.0
+text = "= 0"
+scroll_active = false
+tab_size = 5
+metadata/_edit_use_anchors_ = true

@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://bteurv1mc3iwo"]
+
+[ext_resource type="Texture2D" uid="uid://csw3snw6lj28u" path="res://images/farmingTilesheetComplete.png" id="1_ed5o7"]
+[ext_resource type="Script" path="res://sell_zone.gd" id="1_rxp0g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5qvo"]
+atlas = ExtResource("1_ed5o7")
+region = Rect2(64, 80, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6w38h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5qvo")
+}],
+"loop": true,
+"name": &"coin",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0db2f"]
+radius = 5.0
+
+[node name="sell_zone" type="StaticBody2D"]
+script = ExtResource("1_rxp0g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6w38h")
+animation = &"coin"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_0db2f")

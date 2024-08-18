@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 var selected = false
-var seed_type = 1 #carrot
+var seed_type = 2 #onion
 
 func _ready(): #void start()
 	$AnimatedSprite2D.play("default")
@@ -15,7 +15,6 @@ func _input(event: InputEvent) -> void:
 		if (event.button_index == MOUSE_BUTTON_LEFT) and not event.pressed:
 			selected = false
 			Global.plantSelected = 0
-
 
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	if Input.is_action_just_pressed("click"):
