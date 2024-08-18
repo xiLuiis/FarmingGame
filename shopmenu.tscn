@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://rqslfdttbccv"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_l3fp7"]
+
+[node name="shopmenu" type="StaticBody2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 86.0
+offset_bottom = 36.0
+color = Color(0.211765, 0.196078, 0.184314, 0.290196)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 5.0
+offset_top = 20.0
+offset_right = 13.0
+offset_bottom = 34.0
+icon = SubResource("ViewportTexture_l3fp7")

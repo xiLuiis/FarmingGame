@@ -19,7 +19,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0db2f"]
-radius = 5.0
+radius = 6.0
 
 [node name="sell_zone" type="StaticBody2D"]
 script = ExtResource("1_rxp0g")
@@ -32,3 +32,5 @@ animation = &"coin"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_0db2f")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
