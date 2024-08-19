@@ -428,9 +428,6 @@ scale = Vector2(1.03499, 1.15385)
 position = Vector2(137, 22)
 scale = Vector2(1.03499, 1.15385)
 
-[node name="player" parent="." instance=ExtResource("2_6fvv0")]
-position = Vector2(217, 61)
-
 [node name="growingzone" parent="." instance=ExtResource("4_svchi")]
 position = Vector2(40, 72)
 
@@ -443,6 +440,9 @@ position = Vector2(104, 72)
 [node name="growingzone4" parent="." instance=ExtResource("4_svchi")]
 position = Vector2(136, 72)
 
+[node name="player" parent="." instance=ExtResource("2_6fvv0")]
+position = Vector2(217, 61)
+
 [node name="carrot_seedpack" parent="." instance=ExtResource("3_p0qht")]
 position = Vector2(170, 61)
 
@@ -450,15 +450,15 @@ position = Vector2(170, 61)
 position = Vector2(185, 61)
 
 [node name="carroticon" type="AnimatedSprite2D" parent="."]
-position = Vector2(289, -15)
+position = Vector2(277, -15)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_pb084")
 animation = &"carrot"
 
 [node name="carrottext" type="RichTextLabel" parent="."]
-offset_left = 301.0
+offset_left = 289.0
 offset_top = -25.0
-offset_right = 341.0
+offset_right = 329.0
 offset_bottom = 15.0
 text = "= 0"
 scroll_active = false
@@ -466,15 +466,15 @@ tab_size = 5
 metadata/_edit_use_anchors_ = true
 
 [node name="onionicon" type="AnimatedSprite2D" parent="."]
-position = Vector2(289.5, 14)
+position = Vector2(277.5, 14)
 scale = Vector2(1.4375, 1.375)
 sprite_frames = SubResource("SpriteFrames_ctjuv")
 animation = &"onion"
 
 [node name="oniontext" type="RichTextLabel" parent="."]
-offset_left = 301.0
+offset_left = 289.0
 offset_top = 3.0
-offset_right = 341.0
+offset_right = 329.0
 offset_bottom = 43.0
 text = "= 0"
 scroll_active = false
@@ -482,15 +482,15 @@ tab_size = 5
 metadata/_edit_use_anchors_ = true
 
 [node name="coinicon" type="AnimatedSprite2D" parent="."]
-position = Vector2(288, 39.75)
+position = Vector2(276, 39.75)
 scale = Vector2(1.25, 1.21875)
 sprite_frames = SubResource("SpriteFrames_bjb8b")
 animation = &"coin"
 
 [node name="cointext" type="RichTextLabel" parent="."]
-offset_left = 300.5
+offset_left = 288.5
 offset_top = 28.0
-offset_right = 340.5
+offset_right = 328.5
 offset_bottom = 68.0
 text = "= 0"
 scroll_active = false

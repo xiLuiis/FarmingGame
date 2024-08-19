@@ -1,7 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://dv1vxunauy46v"]
+[gd_scene load_steps=11 format=3 uid="uid://dv1vxunauy46v"]
 
 [ext_resource type="Script" path="res://shop.gd" id="1_iqvnx"]
 [ext_resource type="Texture2D" uid="uid://csw3snw6lj28u" path="res://images/farmingTilesheetComplete.png" id="2_dqyrh"]
+[ext_resource type="PackedScene" uid="uid://5y6hxsk8efr8" path="res://berry_seedpack.tscn" id="3_152cx"]
+[ext_resource type="PackedScene" uid="uid://rqslfdttbccv" path="res://shopmenu.tscn" id="4_fn4xg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bk3q8"]
 atlas = ExtResource("2_dqyrh")
@@ -58,6 +60,12 @@ shape = SubResource("RectangleShape2D_2d6la")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-1, 8)
 shape = SubResource("CircleShape2D_s7wpd")
+
+[node name="berry_seedpack" parent="." instance=ExtResource("3_152cx")]
+position = Vector2(6, 1)
+
+[node name="shopmenu" parent="." instance=ExtResource("4_fn4xg")]
+position = Vector2(14, -39)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

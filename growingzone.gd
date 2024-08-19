@@ -27,6 +27,8 @@ func _on_area_2d_area_entered(area):
 			plantgrowing = true
 			$oniongrowtimer.start()
 			$plant.play("onion")
+		if plant == 3:
+			print("No made this function yet")
 	else:
 		print("plant is already growing here")
 
