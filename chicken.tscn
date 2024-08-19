@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=3 uid="uid://c8f5wr6wv1n5g"]
+
+[ext_resource type="Texture2D" uid="uid://csw3snw6lj28u" path="res://images/farmingTilesheetComplete.png" id="1_61gy3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_un4ne"]
+atlas = ExtResource("1_61gy3")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2p2wj"]
+atlas = ExtResource("1_61gy3")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_856xb"]
+atlas = ExtResource("1_61gy3")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a5dxn"]
+atlas = ExtResource("1_61gy3")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l12jg"]
+atlas = ExtResource("1_61gy3")
+region = Rect2(64, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prnem"]
+atlas = ExtResource("1_61gy3")
+region = Rect2(80, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w3343"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_un4ne")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2p2wj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_856xb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a5dxn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l12jg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prnem")
+}],
+"loop": true,
+"name": &"eating",
+"speed": 5.0
+}]
+
+[node name="chicken" type="CharacterBody2D"]
+
+[node name="walkingtimer" type="Timer" parent="."]
+
+[node name="changestatetimer" type="Timer" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_w3343")
+animation = &"eating"
+frame_progress = 0.916931

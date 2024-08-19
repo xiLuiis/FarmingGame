@@ -31,6 +31,7 @@ sprite_frames = SubResource("SpriteFrames_e3nsf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 process_mode = 3
+position = Vector2(-1, 0)
 scale = Vector2(1.00638, 1)
 shape = SubResource("CircleShape2D_2yebt")
 debug_color = Color(0.780392, 0.368627, 0.607843, 0.419608)
