@@ -139,6 +139,7 @@ bbcode_enabled = true
 text = "[font_size=12]100[/font_size]"
 scroll_active = false
 tab_size = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="coinicon" type="AnimatedSprite2D" parent="."]
 position = Vector2(67.125, 10)

@@ -16,7 +16,6 @@ func _input(event: InputEvent) -> void:
 			selected = false
 			Global.plantSelected = 0
 
-
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	if Input.is_action_just_pressed("click"):
 		Global.plantSelected = seed_type

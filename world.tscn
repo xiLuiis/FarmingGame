@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://crry12td0rd7h"]
+[gd_scene load_steps=20 format=3 uid="uid://crry12td0rd7h"]
 
 [ext_resource type="Texture2D" uid="uid://csw3snw6lj28u" path="res://images/farmingTilesheetComplete.png" id="1_6hcja"]
 [ext_resource type="Script" path="res://world.gd" id="1_aasvw"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bteurv1mc3iwo" path="res://sell_zone.tscn" id="4_5fnq6"]
 [ext_resource type="PackedScene" uid="uid://ce117btd3uir5" path="res://growingzone.tscn" id="4_svchi"]
 [ext_resource type="PackedScene" uid="uid://43xj4m6whi4o" path="res://onion_seedpack.tscn" id="5_g1qw4"]
+[ext_resource type="PackedScene" uid="uid://c8f5wr6wv1n5g" path="res://chicken.tscn" id="9_bykt3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tcsre"]
 resource_name = "Floor"
@@ -425,7 +426,7 @@ position = Vector2(113, 17)
 scale = Vector2(1.03499, 1.15385)
 
 [node name="sell_zone" parent="." instance=ExtResource("4_5fnq6")]
-position = Vector2(137, 22)
+position = Vector2(141, 25)
 scale = Vector2(1.03499, 1.15385)
 
 [node name="growingzone" parent="." instance=ExtResource("4_svchi")]
@@ -496,3 +497,15 @@ text = "= 0"
 scroll_active = false
 tab_size = 5
 metadata/_edit_use_anchors_ = true
+
+[node name="chicken" parent="." instance=ExtResource("9_bykt3")]
+position = Vector2(250, 93)
+
+[node name="chicken2" parent="." instance=ExtResource("9_bykt3")]
+position = Vector2(255, 43)
+
+[node name="chicken3" parent="." instance=ExtResource("9_bykt3")]
+position = Vector2(272, 102)
+
+[node name="chicken4" parent="." instance=ExtResource("9_bykt3")]
+position = Vector2(303, 85)

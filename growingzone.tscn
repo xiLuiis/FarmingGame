@@ -98,6 +98,7 @@ sprite_frames = SubResource("SpriteFrames_t73k4")
 position = Vector2(0, -5)
 sprite_frames = SubResource("SpriteFrames_5s66i")
 animation = &"none"
+frame_progress = 0.370408
 
 [node name="oniongrowtimer" type="Timer" parent="."]
 wait_time = 5.0

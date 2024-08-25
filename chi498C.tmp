@@ -63,16 +63,15 @@ position = Vector2(25, 10)
 script = ExtResource("1_0dywx")
 
 [node name="walkingtimer" type="Timer" parent="."]
-autostart = true
 
 [node name="changestatetimer" type="Timer" parent="."]
-autostart = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-14, -2)
 sprite_frames = SubResource("SpriteFrames_w3343")
-animation = &"walking"
-frame_progress = 0.594811
+animation = &"eating"
+frame = 1
+frame_progress = 0.656659
 
 [connection signal="timeout" from="walkingtimer" to="." method="_on_walkingtimer_timeout"]
 [connection signal="timeout" from="changestatetimer" to="." method="_on_changestatetimer_timeout"]
