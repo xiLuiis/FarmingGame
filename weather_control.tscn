@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dyg2dplac50va"]
+
+[node name="weather_control" type="StaticBody2D"]
+
+[node name="raincolor" type="CanvasModulate" parent="."]
+
+[node name="rain" type="GPUParticles2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
